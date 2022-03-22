@@ -21,7 +21,7 @@ public:
         if (arr[new_idx] < 0)
           continue;
         arr[new_idx] = -arr[new_idx];
-        queue.push_back(new_idx);    
+        queue.push_back(new_idx);
       }
     }
     return false;

@@ -4,14 +4,14 @@ private:
   char marker_sea = 'X';
   char marker_border = 'B';
   vector<vector<int>> directions = {{0, 1}, {0, -1}, {1, 0}, {-1, 0}};
-    
+
 public:
   void solve(vector<vector<char>>& board) {
     detectBorder(board);
     modifyBoard(board, marker_island, marker_sea);   
     modifyBoard(board, marker_border, marker_island);
   }
-  
+
   void detectBorder(vector<vector<char>>& board)
   {
     int height = board.size();
@@ -23,7 +23,7 @@ public:
       }
     }
   }
-  
+
   vector<pair<int, int>> getBorderPositions(vector<vector<char>>& board) {
     vector<pair<int, int>> result;
     int height = board.size();

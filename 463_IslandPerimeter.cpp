@@ -9,13 +9,13 @@ public:
           if (grid[row][col] == 0)
             continue;
           perimeter += 4;
-          
+
           if (row > 0 && grid[row - 1][col] == 1)
             perimeter -= 2;
           if (col > 0 && grid[row][col - 1] == 1)
             perimeter -= 2;
         }
       }
-      return perimeter;        
+      return perimeter;
     }
 };

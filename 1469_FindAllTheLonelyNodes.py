@@ -8,19 +8,15 @@ class Solution:
     def getLonelyNodes(self, root: Optional[TreeNode]) -> List[int]:
         self.list = []
         self.helper(root)
-        
+
         return self.list
-        
+
     def helper(self, root):
         if root == None:
-            return 
-        
-        self.helper(root.left) 
-        
+            return
+        self.helper(root.left)
         self.helper(root.right)
-        
         if (root.left == None and root.right != None):
             self.list.append(root.right.val)
         if (root.left != None and root.right == None):
-            self.list.append(root.left.val)            
-        
+            self.list.append(root.left.val)
