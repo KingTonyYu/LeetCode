@@ -7,7 +7,7 @@ public:
     vector<vector<int>> result;
     vector<bool> hash(length);
     vector<int> current;
-    
+
     function<void()> dfs = [&]() {
       if (current.size() == length) {
         result.push_back(current);
