@@ -5,7 +5,7 @@ public:
       unordered_map<int, vector<int>> hash_table;
       vector<bool> visited(length);
       deque<int> queue;
-      
+
       for (int i = 0; i < length; i++) {
         hash_table[arr[i]].push_back(i);
       }
