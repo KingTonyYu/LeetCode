@@ -6,17 +6,17 @@ public:
 //         int max_length = 1;
 //         int length = static_cast<int>(s.size());
 //         vector<vector<bool>> table(length, vector<bool>(length, false));
-        
+
 //         for (int i = 0; i < length; i++)
 //         {
 //             table[i][i] = true;
 //         }
-        
+
 //         for (int i = 1; i < length; i++)
 //         {
 //             table[i][i - 1] = true;
 //         }
-        
+
 //         for (int l = length - 2; l > -1; l--)
 //         {
 //             for (int r = l + 1; r < length; r++)
@@ -27,7 +27,7 @@ public:
 //                 if (r - l + 1 > max_length)
 //                 {
 //                     max_length = r - l + 1;
-                    
+
 //                     max_string = s.substr(l, max_length);
 //                 }
 //             }
@@ -39,12 +39,12 @@ public:
         int max_length = 1;
         int length = static_cast<int>(s.size());
         vector<bool> table(length, false);
-        
+
         for (int i = 0; i < length; i++)
         {
             table[i] = true;
         }
-        
+
         for (int l = length - 2; l > -1; l--)
         {
             bool last_diag = true;
